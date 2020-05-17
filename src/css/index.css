@@ -151,6 +151,9 @@ body.ht-visible #header {
   overflow: hidden;
   transition: all 0.3s ease-in-out;
 }
+#bt-delivery > .button-small{
+  display: none;
+}
 .button{
   position: relative;
   display: inline-block;
@@ -430,4 +433,46 @@ li{
   position: relative;
   height: 1000px;
   width: 100%;
+}
+
+
+
+@media (max-width: 700px) {
+  .box-left {
+    overflow: hidden;
+  }
+  .bt-menu {
+    width: 65px;
+    min-width: inherit;
+  }
+  .bt-menu > span {
+    display: none !important;
+  }
+  #bt-delivery{
+    width: auto;
+  }
+  #bt-delivery > .button-large{
+    display: none;
+  }
+  .item-container{
+    display: block;
+    height: inherit;
+  }
+  #bt-delivery>.button-small{
+    padding: 0px 23px;
+    width: inherit;
+    display: block;
+  }
+  .fas.fa-shipping-fast.fa-lg{
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translate(0px, -50%);
+    color: rgb(68, 68, 68);
+  }
+  .SlideContent{
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+  }
 }
