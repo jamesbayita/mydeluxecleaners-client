@@ -13,7 +13,7 @@ export default [
             <p>In response to these uncertain times, we are now offering home pickup and delivery. For more information click on the link below.</p>
         ),
         callToAction: (
-            <button onClick={((e)=>console.log('hello'))}>Learn More</button>
+            <button>Learn More</button>
         )
     },{
         img: img02,

@@ -1,143 +1,116 @@
-import React, { useReducer, useEffect, useRef } from 'react';
+import React, {useReducer, useEffect, useRef} from 'react';
 import slides from '../helpers/slides';
-// useReducer PARAMS
-const SLIDE_DURATION = 4000;
-const initialState = {
-    currentIndex: 0,
-    isPlaying: true,
-    takeFocus: false
-}
-function reducer(state, action){
-    switch(action.type){
-        case "PROGRESS":
-        case "NEXT":
-            return {
-                ...state,
-                takeFocus: false,
-                isPlaying: action.type === "PROGRESS",
-                currentIndex: (state.currentIndex + 1) % slides.length
-            };
-        case "PREVIOUS": 
-            return {
-                ...state,
-                takeFocus: false,
-                isPlaying: false,
-                currentIndex:
-                (state.currentIndex - 1 + slides.length) % slides.length
-            };
-        case "PLAY":
-            return {
-                ...state,
-                takeFocus: false,
-                isPlaying: true
-            }
-        case "PAUSE":{
-            return {
-                ...state,
-                takeFocus:false,
-                isPlaying: false
-            }
-        }
-        case "GOTO": 
-            return {
-                ...state,
-                takeFocus: true,
-                currentIndex: action.index
-            }
-        default:
-            return state;
-    }
-}
-// END
+import reducer from './reducer';
+import initialState from './initialState';
+const SLIDE_DURATION = 5000;
 
-// CHILDREN COMPONENTS
-function Carousel(props) {
-    return <section className="Carousel" {...props}></section>
-}
-function Slides(props) {
-    return <ul {...props}></ul>
-}
-function Slide({isCurrent, takeFocus, image, id, title, content, callToAction}) {
-    let ref = useRef();
 
-    useEffect(()=>{
-        if(isCurrent && takeFocus) {
-            ref.current.focus();
-        }
-    },[isCurrent, takeFocus]);
-
+function Container(props){
     return (
-        <li
-            ref={ref}
-            aria-hidden={!isCurrent}
-            tabIndex="-1"
-            aria-labelledby={id}
-            className="Slide"
-            style={{backgroundImage: `url(${image})`}}
-        >
-        <div className="SlideContent">
-            <h2 id={id}>{title}</h2>
-            {content}
-            {callToAction}
-        </div>
-
-        </li>
+        <div {...props}/>
     )
-
+}
+function BoxBackground(props){
+    return(
+        <div {...props}></div>
+    )
+}
+function Image({isCurrent, takeFocus, image,id, title, callToAction, content}){
+    let ref = useRef();
+    useEffect(()=>{
+            if(isCurrent && takeFocus){
+                ref.current.focus();
+            }},[isCurrent, takeFocus])
+    return(
+        <div aria-hidden={!isCurrent} className="showBG">
+            <img 
+                alt={`Background ${id}`}
+                ref={ref} 
+                src={image}
+                tabIndex="-1"
+                aria-labelledby={id}
+                className="backgroundImage"
+            />
+            <BoxContent
+                title={title}
+                content={content}
+                callToAction={callToAction}
+            />
+        </div>
+    )
+}
+function BoxContent({title, callToAction, content}){
+    return(
+        <div className="box-content">
+            <div className="inner verticle-center">
+                <div className="box-info">
+                    <div className="row">
+                        <h1>{title}</h1>
+                    </div>
+                    <div className="row">
+                    {content}
+                    </div>
+                    <div className="row">
+                    {callToAction}
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
 }
 function SlideNav(props){
-    return <ul className="SlideNav" {...props} />
+    return(
+        <ul className="SlideNav" {...props}/>
+    )
 }
 function SlideNavItem({isCurrent, ...props}){
-    return (
+    return(
         <li className="SlideNavItem">
             <button {...props} aria-current={isCurrent}>
-                <span />
+                <span/>
             </button>
         </li>
     )
 }
-// END
-export default function Section(){
+export default function Carousel(){
     let [state, dispatch] = useReducer(reducer, initialState);
 
-    useEffect(()=>{
-        if(state.isPlaying){
+    useEffect(
+        ()=>{
             let timeout = setTimeout(()=>{
                 dispatch({type: "PROGRESS"});
-            }, SLIDE_DURATION);
-            return ()=>clearTimeout(timeout);
-        }
-}, [state.currentIndex, state.isPlaying]);
+            },SLIDE_DURATION);
+            return () => clearTimeout(timeout);
+        },[state.isPlaying, state.currentIndex])
 
     return(
-        <Carousel aria-label="Image Carousel">
-            <Slides className="Slides-ul">
-                {slides.map((slide, index) => (
-                    <Slide
+        <Container className="carousel-container">
+            <BoxBackground className="box-bg has-tablet">
+                {slides.map((slide, index)=>(
+                    <Image
                         key={index}
                         id={`image-${index}`}
                         image={slide.img}
-                        title={slide.title}
                         isCurrent={index === state.currentIndex}
                         takeFocus={state.takeFocus}
-                        content={slide.content}
                         callToAction={slide.callToAction}
+                        title={slide.title}
+                        content={slide.content}
                     />
                 ))}
-            </Slides>
+            </BoxBackground>
             <SlideNav>
-                {slides.map((slide,index) => (
+                {slides.map((slide, index) => (
                     <SlideNavItem
                         key={index}
                         isCurrent={index === state.currentIndex}
-                        aria-label={`Slide ${index + 1}`}
+                        aria-label={`Slide-${index + 1}`}
                         onClick={()=>{
                             dispatch({type: "GOTO", index});
                         }}
                     />
                 ))}
             </SlideNav>
-        </Carousel>
+        </Container>
     )
 }
