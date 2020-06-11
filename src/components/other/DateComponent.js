@@ -16,8 +16,6 @@ function CurrentTime(){
         {time ?
             <div className="bottom-box-container">
                 <span>{`${time.dn}, ${time.mo} ${time.da}, ${time.ye}`}</span>
-                <br/>
-                <span>{`${time.h}:${time.m} ${time.ampm}`}</span>
             </div>
             : null
         }

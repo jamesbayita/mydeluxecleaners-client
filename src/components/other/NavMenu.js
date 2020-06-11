@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../img/logo.svg';
-import DateComponent from './other/DateComponent';
+import logo from '../../img/logo.svg';
+import DateComponent from './DateComponent';
 
 function NavMenu() {
     let onClick_closeButton = () => {

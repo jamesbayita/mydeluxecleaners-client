@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import logoDeluxe from '../img/deluxeLogo.svg';
+import logoDeluxe from '../../img/deluxeLogo.svg';
 
 function NavBar() {
     let handleClick = (e) => {
