@@ -4,6 +4,7 @@ import NavBar from './other/NavBar';
 import NavMenu from './other/NavMenu'
 import {Home, About,Services, Locations, Delivery} from './pages/index';
 
+// Hello m8 this is james
 class App extends React.Component{
   render(){
     return(
@@ -19,4 +20,5 @@ class App extends React.Component{
     )
   }
 }
+// balh blah blahj
 export default App;
