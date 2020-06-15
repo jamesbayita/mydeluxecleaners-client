@@ -684,6 +684,19 @@ content: " \203A";
   font-weight: 400;
   margin-bottom: 5px;
 }
+.form201{
+  padding: 1.5rem;
+  display: block;
+  width: 48.5%;
+}
+.form201 > h2{
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: .75rem;
+  font-weight: 500;
+}
+.form201 > p{
+  font-family: 'Roboto', sans-serif;
+}
 /* footer */
 .footer{
   background-color: #F4F7F6;

@@ -1,9 +1,16 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import Carousel from '../other/Carousel';
 import {Link} from 'react-router-dom';
 import logo from '../../img/full_logo.svg'
 import Form from '../other/Form';
-export default function Home(){    
+
+// HOME PAGE
+
+
+
+export default function Home(){
+    const [res, setRes] = useState();
+    let [isLoading, setIsLoading] = useState(false);
     return(
         <div className="Home-Wrapper">
             <div className="block_01">
@@ -42,7 +49,18 @@ export default function Home(){
             <div className="block_03"></div>
             <div className="block_04">
                 <section className="home-form">
-                    <Form/>
+                    {res ? 
+                    <div className="form201">
+                        <h2>{`Thank you ${res.first_name},`}</h2>
+                        <p>You have successfully subscribed to our mailing list!</p>
+                    </div>
+                    : 
+                    <Form
+                        isLoading={isLoading}
+                        setIsLoading={setIsLoading}
+                        setRes={setRes}
+                    />
+                    }
                     <div className="right-content"></div>
                 </section>
             </div>

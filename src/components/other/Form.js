@@ -1,26 +1,39 @@
 import React from 'react';
 import {Formik} from 'formik'
 import * as yup from 'yup';
+import axios from 'axios';
 
-
+// VALIDATION SCHEMA
 let schema = yup.object().shape({
     first_name: yup.string().required('This field is required'),
     last_name: yup.string().required('This field is required'),
     email: yup.string().email('Please enter a valid email').required('This field is required')
 });
-
-const Form = () => (
+// onSubmit: asynchronous function will send POST request to server.
+// status(201): will return response object with user input values.
+// status(400): will return error object.
+// NOTE: server will validate email address to make sure the value isn't currently subscribed
+const Form = (props) => (
        <div className="form-container">
            <h2 className="form-heading">Sign up for our Rewards Program</h2>
            <p className="form-p">Get special coupons, notifications, and more!</p>
             <Formik
                 initialValues={{first_name: '', last_name: '', email: ''}}
                 validationSchema={schema}
-                onSubmit={(values, {setSubmitting, resetForm }) => {
-                    alert('Form Submiited Successfully');
-                    console.log(values)
-                    setSubmitting(false);
-                    resetForm(true);
+                onSubmit={async (values, {setSubmitting, resetForm, setFieldError}) => {
+                    props.setIsLoading(true);
+                    await axios.post('/api/users', values)
+                    .then(res => {
+                        resetForm(true);
+                        props.setIsLoading(false);
+                        props.setRes(res.data.doc);
+                    }).catch(error => {
+                        props.setIsLoading(false);
+                        if(error.response){
+                            setFieldError('email', 'This email is already subscribed to our mailing list');
+                        }
+                        setSubmitting(false);
+                    });
                 }}
             >
             {({values, handleSubmit, isSubmitting, handleChange, errors, touched,handleBlur})=>(
@@ -70,7 +83,7 @@ const Form = () => (
                         <span className="email-error-message">{errors.email && touched.email && errors.email}</span>
                     </div>
                     <div className='button-container'>
-                        <button className="submit-button" type="submit" disabled={isSubmitting}>Sign Up</button>
+                        <button className="submit-button" type="submit" disabled={isSubmitting}>{props.isLoading ? <i className="fas fa-spinner fa-spin"></i> : 'Sign Up'}</button>
                     </div>
                 </form>
             )}
