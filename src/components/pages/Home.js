@@ -3,7 +3,10 @@ import Carousel from '../other/Carousel';
 import {Link} from 'react-router-dom';
 import logo from '../../img/full_logo.svg'
 import Form from '../other/Form';
-
+import imageOne from '../../img/home-3.jpeg';
+import imageTwo from '../../img/dryCleaningImg.jpeg';
+import imageThree from '../../img/home-2.jpeg';
+import imageFour from '../../img/home-1.png';
 // HOME PAGE
 
 
@@ -17,34 +20,68 @@ export default function Home(){
                 <Carousel/>
             </div>
             <div className="block_02">
-                <div className="feature">
-                    <Link className="block_02_link" to={'/locations'}> <i className="fas fa-map-marked-alt fa-5x"></i>
-                    </Link>
-                    <h3 className="feature_title">Locations</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum magnam dolores asperiores.</p>
-                    <Link className="feature_link" to={'/locations'}>View Locations</Link>
+                <div className="block_heading">
+                    <h1>Our Services</h1>
                 </div>
-                <div className="feature">
-                <Link className="block_02_link" to={'/coupons'}> <i className="fas fa-money-check-alt fa-5x"></i>
-                    </Link>
-                    <h3 className="feature_title">Coupons</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum magnam dolores asperiores.</p>
-                    <Link className="feature_link" to={'/coupons'}>View Coupons</Link>
+                <div className="services-container-home">
+                    <div className="s-container">
+                        <div className="s-image-container">
+                            <img src={imageOne} alt="wedding" />
+                        </div>
+                        <div className="s-description-container">
+                            <div className="s-header-container">
+                                <h2>Bridal Care</h2>
+                            </div>
+                            <div className="s-description">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nobis id molestiae? Atque voluptate quas repellat ad dicta consectetur accusantium, voluptas animi minima aliquam beatae possimus assumenda inventore aspernatur aut?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="s-container">
+                        <div className="s-image-container">
+                            <img src={imageTwo} alt="dry clean"/>
+                        </div>
+                        <div className="s-description-container">
+                            <div className="s-header-container">
+                                <h2>Dry Cleaning</h2>
+                            </div>
+                            <div className="s-description">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nobis id molestiae? Atque voluptate quas repellat ad dicta consectetur accusantium, voluptas animi minima aliquam beatae possimus assumenda inventore aspernatur aut?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="s-container">
+                        <div className="s-image-container">
+                            <img src={imageThree} alt="alterations"/>
+                        </div>
+                        <div className="s-description-container">
+                         <div className="s-header-container">
+                                <h2>Alterations</h2>
+                            </div>
+                            <div className="s-description">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nobis id molestiae? Atque voluptate quas repellat ad dicta consectetur accusantium, voluptas animi minima aliquam beatae possimus assumenda inventore aspernatur aut?</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="s-container">
+                        <div className="s-image-container">
+                            <img src={imageFour} alt="laundry"/>
+                        </div>
+                        <div className="s-description-container">
+                         <div className="s-header-container">
+                                <h2>Laundry</h2>
+                            </div>
+                            <div className="s-description">
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis nobis id molestiae? Atque voluptate quas repellat ad dicta consectetur accusantium, voluptas animi minima aliquam beatae possimus assumenda inventore aspernatur aut?</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div className="feature">
-                <Link className="block_02_link" to={'/services'}> <i className="fab fa-black-tie fa-5x"></i>
-                    </Link>
-                    <h3 className="feature_title">Services</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum magnam dolores asperiores.</p>
-                    <Link className="feature_link" to={'/services'}>Our Services</Link>
-                </div>
-                <div className="feature">
-                <Link className="block_02_link" to={'/alterations'}> <i className="fas fa-cut fa-5x"></i>
-                    </Link>
-                    <h3 className="feature_title">Alterations</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa harum magnam dolores asperiores.</p>
-                    <Link className="feature_link" to={'/alterations'}>Learn More</Link>
-                </div>
+                   <div className="more-services">
+                        <div className="jusitfy-container">
+                            <Link className="view-more" to={'/services'}>view more</Link>
+                        </div>
+                    </div>
             </div>
             <div className="block_03"></div>
             <div className="block_04">
@@ -61,7 +98,18 @@ export default function Home(){
                         setRes={setRes}
                     />
                     }
-                    <div className="right-content"></div>
+                    <div className="right-content">
+                        <div className="coupon">
+                            <h2 className="coupon-h2">Coupons</h2>
+                            <div className="coupon-container">
+                                <p>Save on your next visit with our coupons.</p>
+                                <p>Restrictions may apply.</p>
+                            </div>
+                            <div className="coupon-link-container">
+                                <Link className="coupon-link" to={'/coupons'}>View Coupons</Link>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </div>
             <div className="footer-widgets">

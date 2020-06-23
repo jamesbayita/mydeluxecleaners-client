@@ -15,8 +15,8 @@ let schema = yup.object().shape({
 // NOTE: server will validate email address to make sure the value isn't currently subscribed
 const Form = (props) => (
        <div className="form-container">
-           <h2 className="form-heading">Sign up for our Rewards Program</h2>
-           <p className="form-p">Get special coupons, notifications, and more!</p>
+           <h2 className="form-heading">Join our Mailing List</h2>
+           <p className="form-p">Special coupons, notifications, and more.</p>
             <Formik
                 initialValues={{first_name: '', last_name: '', email: ''}}
                 validationSchema={schema}
