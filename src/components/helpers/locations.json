@@ -1,0 +1,33 @@
+[
+    {
+        "title": "Stepahnie",
+        "address": "651 N Stephanie St, Henderson, NV 89014",
+        "coords": {
+            "lat": 36.0672604,
+            "lng": -115.0471686
+        }
+    },
+    {
+        "title": "Horizon",
+        "address": "1550 W Horizon Ridge Pkwy #H, Henderson NV 89012",
+        "coords": {
+            "lat": 36.0181182,
+            "lng": -115.0547201
+        }
+    },
+    {
+        "title": "Jones",
+        "address": "7720 S Jones Blvd #104, Las Vegas, NV 89139",
+        "coords": {
+            "lat": 36.0489728,
+            "lng": -115.2243895
+        }
+    },{
+        "title": "Windy",
+        "address": "6436 Windy Rd, Las Vegas, NV 89119",
+        "coords": {
+            "lat": 36.0723364,
+            "lng": -115.1763853
+        }
+    }
+]

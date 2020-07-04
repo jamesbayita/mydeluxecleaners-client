@@ -2,7 +2,8 @@ import React, {useReducer, useEffect, useRef} from 'react';
 import slides from '../helpers/slides';
 import reducer from './reducer';
 import initialState from './initialState';
-const SLIDE_DURATION = 5000;
+import DateComponent from './DateComponent'
+const SLIDE_DURATION = 6000;
 
 
 function Container(props){
@@ -36,6 +37,7 @@ function Image({isCurrent, takeFocus, image,id, title, callToAction, content}){
                 content={content}
                 callToAction={callToAction}
             />
+            <DateComponent/>
         </div>
     )
 }
@@ -90,7 +92,7 @@ export default function Carousel(){
                     <Image
                         key={index}
                         id={`image-${index}`}
-                        image={slide.img}
+                        image={slide.img ? slide.img : null}
                         isCurrent={index === state.currentIndex}
                         takeFocus={state.takeFocus}
                         callToAction={slide.callToAction}

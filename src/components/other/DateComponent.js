@@ -14,9 +14,11 @@ function CurrentTime(){
     return(
         <>
         {time ?
+        <div className="dateComponent">
             <div className="bottom-box-container">
-                <span>{`${time.dn}, ${time.mo} ${time.da}, ${time.ye}`}</span>
+                <span><span className="bold">{`${time.dn}`}</span> {`${time.mo} ${time.da}, ${time.ye}`}</span>
             </div>
+        </div>
             : null
         }
         </>

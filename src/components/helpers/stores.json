@@ -1,0 +1,93 @@
+{
+    "type": "FeatureCollection",
+    "features": [{
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-115.0471686,
+                    36.0672604
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "crossing": "Stephanie & Sunset",
+                "category": "Dry Cleaners",
+                "hours": {
+                    "weekdays": "8am - 6pm",
+                    "Saturday": "9am - 4pm",
+                    "Sunday": "Closed"
+                },
+                "description": "Professional Dry Cleaners and Alterations.",
+                "name": "Deluxe Cleaners & Alterations",
+                "phone": "+17029827668",
+                "storeid": "1",
+                "city": "Henderson"
+            }
+        },{
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-115.0547201,
+                    36.0181182
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "crossing": "Horizon Ridge & Arroyo Grande",
+                "category": "Dry Cleaners",
+                "hours": {
+                    "weekdays": "8am - 6pm",
+                    "Saturday": "9am - 4pm",
+                    "Sunday": "Closed"
+                },
+                "description": "Professional Dry Cleaners and Alterations.",
+                "name": "Deluxe Cleaners & Alterations",
+                "phone": "17022608567",
+                "storeid": "2",
+                "city": "Henderson"
+            }
+        },{
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-115.1763853,
+                    36.0723364
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "crossing": "Windy & Las Vegas",
+                "category": "Dry Cleaners",
+                "hours": {
+                    "weekdays": "6am - 3pm",
+                    "Saturday": "Closed",
+                    "Sunday": "Closed"
+                },
+                "description": "Professional Dry Cleaners and Alterations.",
+                "name": "Deluxe Cleaners & Alterations",
+                "phone": "17022703160",
+                "storeid": "3",
+                "city": "Las Vegas"
+            }
+        },{
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-115.2243895,
+                    36.0489728
+                ]
+            },
+            "type": "Feature",
+            "properties": {
+                "crossing": "Jones & Robindale",
+                "category": "Dry Cleaners",
+                "hours": {
+                    "weekdays": "8am - 6pm",
+                    "Saturday": "Closed",
+                    "Sunday": "Closed"
+                },
+                "description": "Professional Dry Cleaners and Alterations.",
+                "name": "Deluxe Cleaners & Alterations",
+                "phone": "17022425326",
+                "storeid": "4",
+                "city": "Las Vegas"
+            }
+        }
+    ]
+}

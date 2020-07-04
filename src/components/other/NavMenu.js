@@ -1,7 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../img/logo.svg';
-import DateComponent from './DateComponent';
 
 function NavMenu() {
     let onClick_closeButton = () => {
@@ -25,9 +24,6 @@ function NavMenu() {
                     <li className="li link-list"><Link className="link-item" to="/locations" onClick={onClick_closeButton}>Locations</Link></li>
                     <li className="li link-list"><Link className="link-item" to="/" onClick={onClick_closeButton}>Pickup / Delivery Info</Link></li>
                 </ul>
-            </div>
-            <div className="box-bottom">
-                <DateComponent />
             </div>
         </div>
     )
