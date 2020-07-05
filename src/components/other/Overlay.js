@@ -7,6 +7,8 @@ function Overlay({title ,address, phone, phoneLink, hours,services}) {
             "z-index": "-10"
         }
         let element = document.querySelector('.overlay');
+        let locationList = document.querySelector('#locationList');
+        locationList.style.overflow = "scroll";
         Object.assign(element.style, objStyle);
     }
     return(

@@ -42,6 +42,8 @@ function Map({options, className,stores}) {
             "z-index": "100"
         }
         let element = document.querySelector('.overlay');
+        let locationList = document.querySelector('#locationList');
+        locationList.style.overflow = "hidden";
         Object.assign(element.style, objStyle);
     }
     
