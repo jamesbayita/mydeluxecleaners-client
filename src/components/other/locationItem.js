@@ -1,6 +1,10 @@
 import React from 'react';
 
 function locationItem(props) {
+    function handleOverlayClick() {
+        props.handleOverlay(props);
+    }
+
     function handleOnClick(event) {
         event.preventDefault();
         props.handleOnClick(props.coordinates);
@@ -14,11 +18,11 @@ function locationItem(props) {
                         <p className="store-city">{props.city}</p>
                     </div>
                     <div className="store_title_container">
-                        <p className="store_title">{props.crossing}</p>
+                        <p className="store_title">{props.title}</p>
                     </div>
                 </div>
                 <div className="info_conainer">
-                    <button><i className="fas fa-info-circle fa-2x"></i></button>
+                    <button onClick={handleOverlayClick}><span className="moreInfoButton">More Info</span></button>
                 </div>
             </div>
         </div>

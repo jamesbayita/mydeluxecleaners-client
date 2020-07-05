@@ -12,15 +12,26 @@
                 "crossing": "Stephanie & Sunset",
                 "category": "Dry Cleaners",
                 "hours": {
-                    "weekdays": "8am - 6pm",
-                    "Saturday": "9am - 4pm",
+                    "Monday": "8:00AM to 6:00PM",
+                    "Tuesday": "8:00AM to 6:00PM",
+                    "Wednesday": "8:00AM to 6:00PM",
+                    "Thursday": "8:00AM to 6:00PM",
+                    "Friday": "8:00AM to 6:00PM",
+                    "Saturday": "9:00AM to 4:00PM",
                     "Sunday": "Closed"
                 },
                 "description": "Professional Dry Cleaners and Alterations.",
                 "name": "Deluxe Cleaners & Alterations",
-                "phone": "+17029827668",
+                "phoneLink": "tel:+1(702)982-7668",
+                "displayPhone": "702-982-7668",
                 "storeid": "1",
-                "city": "Henderson"
+                "city": "Henderson",
+                "address": {
+                    "street": "651 N Stephanie St",
+                    "suite": null,
+                    "city":"Henderson, NV 89014"
+                },
+                "services": ["Dry Cleaning", "Laundry", "Alterations", "Bridal Care", "Bedding", "Fine Linens","Leather & Suede", "Wash & Fold"]
             }
         },{
             "geometry": {
@@ -34,15 +45,26 @@
                 "crossing": "Horizon Ridge & Arroyo Grande",
                 "category": "Dry Cleaners",
                 "hours": {
-                    "weekdays": "8am - 6pm",
-                    "Saturday": "9am - 4pm",
+                    "Monday": "8:00AM to 6:00PM",
+                    "Tuesday": "8:00AM to 6:00PM",
+                    "Wednesday": "8:00AM to 6:00PM",
+                    "Thursday": "8:00AM to 6:00PM",
+                    "Friday": "8:00AM to 6:00PM",
+                    "Saturday": "9:00AM to 4:00PM",
                     "Sunday": "Closed"
                 },
                 "description": "Professional Dry Cleaners and Alterations.",
                 "name": "Deluxe Cleaners & Alterations",
-                "phone": "17022608567",
+                "phoneLink": "tel:+1(702)260-8567",
+                "displayPhone": "702-260-8567",
                 "storeid": "2",
-                "city": "Henderson"
+                "city": "Henderson",
+                "address": {
+                    "street": "1550 W Horizon Ridge Pkwy",
+                    "suite": "#H",
+                    "city":"Henderson, NV 89012"
+                },
+                "services": ["Dry Cleaning", "Laundry", "Alterations", "Bridal Care", "Bedding", "Fine Linens","Leather & Suede", "Wash & Fold"]
             }
         },{
             "geometry": {
@@ -56,15 +78,26 @@
                 "crossing": "Windy & Las Vegas",
                 "category": "Dry Cleaners",
                 "hours": {
-                    "weekdays": "6am - 3pm",
+                    "Monday": "6:00AM to 3:00PM",
+                    "Tuesday": "6:00AM to 3:00PM",
+                    "Wednesday": "6:00AM to 3:00PM",
+                    "Thursday": "6:00AM to 3:00PM",
+                    "Friday": "6:00AM to 3:00PM",
                     "Saturday": "Closed",
                     "Sunday": "Closed"
                 },
                 "description": "Professional Dry Cleaners and Alterations.",
                 "name": "Deluxe Cleaners & Alterations",
-                "phone": "17022703160",
+                "phoneLink": "tel:+1(702)270-3160",
+                "displayPhone": "702-270-3160",
                 "storeid": "3",
-                "city": "Las Vegas"
+                "city": "Las Vegas",
+                "address": {
+                    "street": "6436 Windy Rd",
+                    "suite": null,
+                    "city":"Las Vegas, NV 89119"
+                },
+                "services": ["Dry Cleaning", "Laundry", "Bridal Care", "Bedding", "Fine Linens","Leather & Suede", "Wash & Fold"]
             }
         },{
             "geometry": {
@@ -78,15 +111,26 @@
                 "crossing": "Jones & Robindale",
                 "category": "Dry Cleaners",
                 "hours": {
-                    "weekdays": "8am - 6pm",
+                    "Monday": "8:00AM to 6:00PM",
+                    "Tuesday": "8:00AM to 6:00PM",
+                    "Wednesday": "8:00AM to 6:00PM",
+                    "Thursday": "8:00AM to 6:00PM",
+                    "Friday": "8:00AM to 6:00PM",
                     "Saturday": "Closed",
                     "Sunday": "Closed"
                 },
                 "description": "Professional Dry Cleaners and Alterations.",
                 "name": "Deluxe Cleaners & Alterations",
-                "phone": "17022425326",
+                "phoneLink": "tel:+1(702)242-5326",
+                "displayPhone": "702-242-5326",
                 "storeid": "4",
-                "city": "Las Vegas"
+                "city": "Las Vegas",
+                "address": {
+                    "street": "7720 S Jones Blvd",
+                    "suite": "#104",
+                    "city":"Las Vegas, NV 89139"
+                },
+                "services": ["Dry Cleaning", "Laundry", "Alterations", "Bridal Care", "Bedding", "Fine Linens","Leather & Suede", "Wash & Fold"]
             }
         }
     ]
