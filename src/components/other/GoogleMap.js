@@ -42,7 +42,9 @@ function Map({options, className,stores}) {
             "z-index": "100"
         }
         let element = document.querySelector('.overlay');
+        let mapElement = document.querySelector('.Map');
         let locationList = document.querySelector('#locationList');
+        mapElement.style.display = "none";
         locationList.style.overflow = "hidden";
         Object.assign(element.style, objStyle);
     }

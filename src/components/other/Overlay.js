@@ -8,6 +8,8 @@ function Overlay({title ,address, phone, phoneLink, hours,services}) {
         }
         let element = document.querySelector('.overlay');
         let locationList = document.querySelector('#locationList');
+        let mapElement = document.querySelector('.Map');
+        mapElement.style.display = "block";
         locationList.style.overflow = "scroll";
         Object.assign(element.style, objStyle);
     }
