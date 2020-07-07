@@ -1,15 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Map from '../other/GoogleMap';
 
-function Locations() {
+function Locations() { 
     return(
-        <div className="Wrapper_locations">
-            <div className="locations_app">
-                <div className="flex_wrapper">
-                    <Map className="Map"/>
-                </div>
+        <main className="Locations_main">
+            <div className="locations_flex_wrapper">
+                <Map/>
             </div>
-        </div>
+        </main>
     )
 }
 

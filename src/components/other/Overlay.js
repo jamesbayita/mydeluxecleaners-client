@@ -2,16 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 function Overlay({title ,address, phone, phoneLink, hours,services}) {
     function closeOverlay() {
-        const objStyle = {
-            "opacity": "0",
-            "z-index": "-10"
-        }
+        
         let element = document.querySelector('.overlay');
-        let locationList = document.querySelector('#locationList');
-        let mapElement = document.querySelector('.Map');
-        mapElement.style.display = "block";
-        locationList.style.overflow = "scroll";
-        Object.assign(element.style, objStyle);
     }
     return(
         <div className="overlay">
