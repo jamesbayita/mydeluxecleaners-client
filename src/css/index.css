@@ -1283,7 +1283,7 @@ content: " \203A";
   }
   .Map{
     top: 0;
-    flex-basis: 40vh;
+    flex-basis: (calc(40vh - 70px));
     flex-grow: 1;
     order: 1;
   }
