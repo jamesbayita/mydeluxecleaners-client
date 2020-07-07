@@ -220,7 +220,6 @@ body.ht-visible #header {
   font-family: 'Roboto', sans-serif;
   background-color: white;
   border-bottom: 1px solid #E6EAEA;
-  overflow: hidden;
   z-index: 1;
 }
 .pull-left{
@@ -1157,15 +1156,20 @@ content: " \203A";
 /* LOCATIONS */
 .Locations_main{
   height: 100%;
+  overflow: hidden;
 }
 .locations_flex_wrapper{
   display: flex;
   flex-direction: row;
-  padding-top: 70px;
   overflow: hidden;
   position: relative;
   z-index: 1;
   height: 100%;
+}
+.location-top{
+  display: block;
+  position: relative;
+  height: 70px;
 }
 .Map{
   flex-basis: 60vw;
@@ -1279,14 +1283,18 @@ content: " \203A";
   }
   .Map{
     top: 0;
-    flex-basis: 35vh;
+    flex-basis: 40vh;
     flex-grow: 1;
     order: 1;
   }
   .list_container{
     order: 2;
-    flex-basis: 65vh;
+    flex-basis: 60vh;
     flex-grow: 1;
+  }
+  .containe{
+    position: relative;
+    overflow-y: hidden;
   }
 }
 @media (max-width: 850px){

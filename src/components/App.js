@@ -16,7 +16,7 @@ class App extends React.Component{
             <Route path={'/services'} component={Services} />
             <Route path={'/locations'} component={Locations} />
             <Route path={'/delivery'} component={Delivery} />
-        </div>
+          </div>
     )
   }
 }
