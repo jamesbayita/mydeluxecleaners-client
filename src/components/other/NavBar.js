@@ -5,6 +5,11 @@ import logoDeluxe from '../../img/deluxeLogo.svg';
 function NavBar() {
     let handleClick = (e) => {
         e.preventDefault();
+        if(window.location.pathname === '/locations'){
+            if(document.querySelector('.location_active')){
+                document.querySelector('.wrapper').classList.remove('location_active');
+            }
+        }
         document.body.classList.add('nav-sidebar-open');
     }
     return(

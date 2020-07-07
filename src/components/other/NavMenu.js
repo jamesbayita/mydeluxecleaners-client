@@ -4,7 +4,14 @@ import logo from '../../img/logo.svg';
 
 function NavMenu() {
     let onClick_closeButton = () => {
-        document.body.classList.remove('nav-sidebar-open')
+        if(window.location.pathname === '/locations'){
+            if(!document.querySelector('.location_active')){
+                setTimeout(() => {
+                    document.querySelector('.wrapper').classList.add('location_active');
+                }, 300)
+            }
+        }
+        document.body.classList.remove('nav-sidebar-open');
     }
     return(
         <div className="nav-main" id="nav-main">

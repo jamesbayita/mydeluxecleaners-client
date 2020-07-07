@@ -38,6 +38,9 @@ button{
   z-index: 2;
   transition: transform 0.5s ease-in-out;
 }
+.wrapper.location_active{
+  overflow: hidden;
+}
 #header{
   position: relative;
   top: 0px;
@@ -1165,11 +1168,7 @@ content: " \203A";
   position: relative;
   z-index: 1;
   height: 100%;
-}
-.location-top{
-  display: block;
-  position: relative;
-  height: 70px;
+  padding-top: 70px;
 }
 .Map{
   flex-basis: 60vw;
