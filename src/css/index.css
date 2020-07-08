@@ -38,7 +38,7 @@ button{
   z-index: 2;
   transition: transform 0.5s ease-in-out;
 }
-.wrapper.location_active{
+.wrapper.locations_active {
   overflow: hidden;
 }
 #header{
@@ -296,7 +296,7 @@ li{
   left: 0px;
   margin: 50px 0px;
   padding: 0px 65px;
-  z-index: 40001;
+  z-index: 10;
 }
 .bottom-box-container{
   font-size: 17px;
@@ -313,7 +313,7 @@ li{
 .Home-Wrapper{
   display: block;
   position: relative;
-  top: 70px;
+  padding-top: 70px;
 }
 /* Carousel Component */
 .carousel-container{
@@ -1157,54 +1157,52 @@ content: " \203A";
   padding-bottom: 50px;
 }
 /* LOCATIONS */
-.Locations_main{
+.offsetContainer{
   height: 100%;
-  overflow: hidden;
 }
-.locations_flex_wrapper{
+.app_flex_container{
   display: flex;
   flex-direction: row;
+  height: 100%;
   overflow: hidden;
   position: relative;
   z-index: 1;
-  height: 100%;
+  padding-top: 70px;
 }
 .Map{
   flex-basis: 60vw;
   order: 2;
-  position: relative;
   flex-shrink: 0;
   flex-grow: 0;
+  padding-top: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
 .list_container{
   flex-basis: 40vw;
   order: 1;
-  position: relative;
-  z-index: 1;
-  height: 100%;
   flex-grow: 0;
   box-shadow: 0 2px 4px 0 rgba(0,0,0,.12);
+  position: relative;
+  z-index: 1;
   overflow: hidden;
   background-color: #fff;
   display: flex;
+  height: 100%;
 }
 .base{
+  display: flex;
   flex-grow: 1;
   position: relative;
   overflow: scroll;
-  display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
-.base > ul {
-  display: block;
-  position: relative;
-  flex-grow: 1;
-}
-.base > ul > li {
-  padding: 20px;
-  border: 1px solid black;
-  width: 100%;
+.base > ul > li{
   height: 200px;
+  display: block;
+  border: 1px solid black;
 }
 /* MEDIA QUERIES */
 @media(max-width: 1294px){
@@ -1279,20 +1277,16 @@ content: " \203A";
   .locations_flex_wrapper{
     flex-direction: column;
   }
+  .app_flex_container{
+    flex-direction: column;
+  }
   .Map{
-    top: 0;
-    flex-basis: 40vh;
-    flex-grow: 1;
     order: 1;
+    flex-basis: 40vh;
   }
   .list_container{
-    order: 2;
-    flex-basis: 60vh;
     flex-grow: 1;
-  }
-  .containe{
-    position: relative;
-    overflow-y: hidden;
+    flex-basis: 0;
   }
 }
 @media (max-width: 850px){

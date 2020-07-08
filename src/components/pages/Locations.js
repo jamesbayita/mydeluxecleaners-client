@@ -1,23 +1,34 @@
 import React, {useEffect} from 'react';
 import Map from '../other/GoogleMap';
+import NavBar from '../other/NavBar';
+import NavMenu from '../other/NavMenu'
 
 function Locations() {
     useEffect(()=> {
-        let header = document.querySelector('#header');
         let wrapper = document.querySelector('.wrapper');
-        wrapper.classList.add('location_active');
-        header.style.position = 'relative';
+        setTimeout(() => {
+            wrapper.classList.add('locations_active');
+        }, 600)
         return function () {
-            header.style.position = 'fixed';
-            wrapper.classList.remove('location_active');
+            wrapper.classList.remove('locations_active');
         }
     })
+    function removeClass() {
+        let wrapper = document.querySelector('.wrapper');
+        wrapper.classList.remove('locations_active');
+    }
+    function addClass() {
+            let wrapper = document.querySelector('.wrapper');
+            wrapper.classList.add('locations_active');   
+    }
     return(
-        <main className="Locations_main">
-            <div className="locations_flex_wrapper">
-                <Map/>
+        <>
+            <NavMenu addClass={addClass}/>
+            <NavBar removeClass={removeClass}/>
+            <div className="offsetContainer">
+                <Map />
             </div>
-        </main>
+        </>
     )
 }
 

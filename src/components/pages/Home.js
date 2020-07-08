@@ -8,7 +8,8 @@ import Bridal from '../../img/BridalTwo.svg';
 import LaundryShirt from '../../img/LaundryShirt.svg';
 import Alterations from '../../img/Alterations.svg'
 import Bedding from '../../img/Bedding.svg'
-
+import NavBar from '../other/NavBar';
+import NavMenu from '../other/NavMenu'
 
 // HOME PAGE
 export default function Home(){
@@ -16,6 +17,8 @@ export default function Home(){
     let [isLoading, setIsLoading] = useState(false);
     return(
         <div className="Home-Wrapper">
+            <NavBar/>
+            <NavMenu />
             <div className="block_01">
                 <Carousel/>
             </div>

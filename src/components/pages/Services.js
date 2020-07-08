@@ -1,4 +1,6 @@
 import React from 'react';
+import NavBar from '../other/NavBar';
+import NavMenu from '../other/NavMenu'
 import Footer from '../other/Footer';
 import Bridal from '../../img/home-3.jpeg';
 import Bedding from '../../img/bedding.jpg';
@@ -13,6 +15,8 @@ import Leather from '../../img/leather.jpg'
 function Services() {
     return(
         <div className="Home-Wrapper">
+            <NavBar />
+            <NavMenu />
             <div className="service_h1_container">
                 <h1 className="servicesTitle">Services</h1>
             </div>

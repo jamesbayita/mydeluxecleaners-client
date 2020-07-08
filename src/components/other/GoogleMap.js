@@ -31,7 +31,7 @@ function Map({options,stores}) {
         });
     }
     return(
-        <>
+        <div className="app_flex_container">
             <div {...{ref}} className="Map"></div>
             <div className="list_container">
                 <section className="base">
@@ -49,7 +49,8 @@ function Map({options,stores}) {
                     </ul>
                 </section>    
             </div>
-        </>
+            <span></span>
+        </div>
     )
 }
 

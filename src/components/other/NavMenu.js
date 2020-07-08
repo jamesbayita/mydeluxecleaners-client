@@ -2,16 +2,17 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logo from '../../img/logo.svg';
 
-function NavMenu() {
+function NavMenu(props) {
     let onClick_closeButton = () => {
-        if(window.location.pathname === '/locations'){
-            if(!document.querySelector('.location_active')){
-                setTimeout(() => {
-                    document.querySelector('.wrapper').classList.add('location_active');
-                }, 300)
-            }
-        }
         document.body.classList.remove('nav-sidebar-open');
+    }
+    function onCloseLocationsButton(){
+        document.body.classList.remove('nav-sidebar-open');
+        if(props.addClass){
+            setTimeout(()=> {
+                props.addClass();
+            }, 600);
+        }
     }
     return(
         <div className="nav-main" id="nav-main">
@@ -21,7 +22,7 @@ function NavMenu() {
                         <img src={logo} alt="LOGO"/>
                     </div>
                     <div className="pull-right">
-                        <div className="bt-close js-close-menu" onClick={onClick_closeButton}>CLOSE</div>
+                        <div className="bt-close js-close-menu" onClick={onCloseLocationsButton}>CLOSE</div>
                     </div>
                 </div>
                 <ul className="menu">

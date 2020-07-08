@@ -1,4 +1,6 @@
 import React from 'react';
+import NavBar from '../other/NavBar';
+import NavMenu from '../other/NavMenu'
 import Footer from '../other/Footer';
 import image from '../../img/windy.jpg'
 import imageTwo from '../../img/shirts.jpg'
@@ -7,6 +9,8 @@ class About extends React.Component{
     render(){
         return(
             <div className="Home-Wrapper">
+                <NavBar />
+                <NavMenu />
                 <div className="about_us_wrapper">
                     <div className="about_header">
                         <div className="header_container">
