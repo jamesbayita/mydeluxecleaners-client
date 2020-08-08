@@ -1,20 +1,30 @@
 import React from 'react';
-import {Route} from 'react-router-dom';
-import {Home, About,Services, Locations, Delivery} from './pages/index';
+import {Route, Switch} from 'react-router-dom';
+import {Home,Services, Locations, Coupons, Delivery, Alterations} from './pages/index';
 
-// Hello m8 this is james
-class App extends React.Component{
-  render(){
+function NoMatch() {
+  return(
+    <div>
+      <h1>404</h1>
+      <h2>Not Found</h2>
+    </div>
+  )
+}
+function App(){
+
     return(
         <div className="wrapper">
+          <Switch>
             <Route path={'/'} exact={true} component={Home} />
-            <Route path={'/about'} component={About} />
             <Route path={'/services'} component={Services} />
             <Route path={'/locations'} component={Locations} />
             <Route path={'/delivery'} component={Delivery} />
-          </div>
+            <Route path={'/coupons'} component={Coupons} />
+            <Route path={'/alterations'} component={Alterations} />
+            <Route component={NoMatch} />
+          </Switch>
+        </div>
     )
   }
-}
-// balh blah blahj
+
 export default App;

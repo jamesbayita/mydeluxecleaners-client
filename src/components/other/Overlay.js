@@ -1,83 +1,81 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-function Overlay({title ,address, phone, phoneLink, hours,services}) {
-    function closeOverlay() {
-        
-        let element = document.querySelector('.overlay');
-    }
+
+function Overlay({hideOverlay, title, hours, phone, phoneLink, storeid, address, directions, services}) {
     return(
-        <div className="overlay">
-            <div className="flex_overlay">
-                <div className="closeButtonContainer">
-                    <button className="closeOverlay" onClick={closeOverlay}><i className="fas fa-times fa-2x"></i></button>
-                </div>
-                <div className="flex_store_info">
-                    <div className="location_title">
-                        <h2>{title}</h2>
+        <div id="Overlay">
+            <div className="overlay_container">
+                <div className="flex_container_overlay">
+                    <div className="overlay_header">
+                        <button className="bt-close-two"><i className="fas fa-times fa-2x" onClick={hideOverlay}></i></button>
                     </div>
-                    <div className="index_info_container">
-                        <div className="address_container">
-                            <p>
-                                <span className="address_line_one">{address.street}</span>
-                                {address.suite && <span className="address_suite">{address.suite}</span>}
-                                <span className="address_line_two">{address.city}</span>
-                            </p>
-                        </div>
-                        <div className="index_links_container">
-                            <div className="phone_container">
-                                <a className="phone_link_1" href={phoneLink}><i className="fas fa-phone-alt "></i>{phone}</a>
-                                <a className="getAddress" href="google.com"><i className="fas fa-directions"></i>Get Directions</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="index_hours_container">
-                        <div className="hours_heading_container">
-                            <h2>Hours</h2>
-                        </div>
-                        <div className="hours_container">
-                            <ul className="schedule">
-                                <div className="scheduleItem">
-                                    <span className="scheduleDay">Monday</span>
-                                    <span className="scheduleTime">{hours.Monday}</span>
+                    <div className="flex_grow">
+                        <article className="more_info_article">
+                            <section className="pb pb1">
+                                <div className="header_block">
+                                    <h1>{title}</h1>
                                 </div>
-                                <div className="scheduleItem">
-                                    <span className="scheduleDay">Tuesday</span>
-                                    <span className="scheduleTime">{hours.Tuesday}</span>
+                                <div className="address_block">
+                                    <div className="address_container_two">
+                                        <p>
+                                            <span>{address.street}</span>
+                                            {address.suite && <span>{address.suite}</span>}
+                                            <span>{address.city}</span>
+                                        </p>
+                                    </div>
+                                    <div className="address_links">
+                                        <a className="call_phone_link" href={phoneLink}><i className="fas fa-phone fa-md"></i>{phone}</a>
+                                        <a className="getDirectionsLink" href={directions} target="_blank" rel="noopener noreferrer"><i className="fas fa-directions fa-md"></i>Get Directions </a>
+                                    </div>
                                 </div>
-                                <div className="scheduleItem">
-                                    <span className="scheduleDay">Wednesday</span>
-                                    <span className="scheduleTime">{hours.Wednesday}</span>
+                            </section>
+                            <section className="pb pb2">
+                                <div>
+                                    <h2 className="hours_heading">Hours</h2>
+                                    <hr className="sb_rule"/>
+                                    <ul className="operations_hours">
+                                        <li className="list_item_hours">
+                                            <span className="scheduleDay">Monday</span>
+                                            <span className="scheduleTime">{hours.Monday}</span>
+                                        </li>
+                                        <li className="list_item_hours">
+                                            <span className="scheduleDay">Tuesday</span>
+                                            <span className="scheduleTime">{hours.Tuesday}</span>
+                                        </li>
+                                        <li className="list_item_hours">
+                                            <span className="scheduleDay">Wednesday</span>
+                                            <span className="scheduleTime">{hours.Wednesday}</span>
+                                        </li>
+                                        <li className="list_item_hours">
+                                            <span className="scheduleDay">Thursday</span>
+                                            <span className="scheduleTime">{hours.Thursday}</span>
+                                        </li>
+                                        <li className="list_item_hours">
+                                            <span className="scheduleDay">Friday</span>
+                                            <span className="scheduleTime">{hours.Friday}</span>
+                                        </li>
+                                        <li className="list_item_hours">
+                                            <span className="scheduleDay">Saturday</span>
+                                            <span className="scheduleTime">{hours.Saturday}</span>
+                                        </li>
+                                        <li className="list_item_hours">
+                                            <span className="scheduleDay">Sunday</span>
+                                            <span className="scheduleTime">{hours.Sunday}</span>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div className="scheduleItem">
-                                    <span className="scheduleDay">Thursday</span>
-                                    <span className="scheduleTime">{hours.Thursday}</span>
+                            </section>
+                            <section className="pb pn3">
+                                <div>
+                                    <h2 className="hours_heading">Services</h2>
+                                    <hr className="sb_rule"/>
+                                    <ul className="services_ul">
+                                        {services.map((service, index) => (
+                                            <li className="feature_service" key={index}>{service}</li>
+                                        ))}
+                                    </ul>
                                 </div>
-                                <div className="scheduleItem">
-                                    <span className="scheduleDay">Friday</span>
-                                    <span className="scheduleTime">{hours.Friday}</span>
-                                </div>
-                                <div className="scheduleItem">
-                                    <span className="scheduleDay">Saturday</span>
-                                    <span className="scheduleTime">{hours.Saturday}</span>
-                                </div>
-                                <div className="scheduleItem">
-                                    <span className="scheduleDay">Sunday</span>
-                                    <span className="scheduleTime">{hours.Sunday}</span>
-                                </div>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="location_services_container">
-                        <div className="hours_heading_container">
-                            <h2>Services</h2>
-                        </div>
-                        <div className="services_available_con">
-                            <ul>
-                                {services.map((service, index) => (
-                                    <li className="service_list" key={index}><Link to={'/services'}>{service}</Link></li>
-                                ))}
-                            </ul>
-                        </div>
+                            </section>
+                        </article>
                     </div>
                 </div>
             </div>

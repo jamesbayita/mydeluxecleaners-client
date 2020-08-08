@@ -5,26 +5,19 @@ import NavMenu from '../other/NavMenu'
 
 function Locations() {
     useEffect(()=> {
-        let wrapper = document.querySelector('.wrapper');
-        setTimeout(() => {
-            wrapper.classList.add('locations_active');
-        }, 600)
+        let htmlElement = document.querySelector('html');
+        htmlElement.classList.add('locations_overflow');
+        let body = document.body;
+        body.classList.add('locations_overflow');
         return function () {
-            wrapper.classList.remove('locations_active');
+            htmlElement.classList.remove('locations_overflow');
+            body.classList.remove('locations_overflow');
         }
-    })
-    function removeClass() {
-        let wrapper = document.querySelector('.wrapper');
-        wrapper.classList.remove('locations_active');
-    }
-    function addClass() {
-            let wrapper = document.querySelector('.wrapper');
-            wrapper.classList.add('locations_active');   
-    }
+    },[])
     return(
         <>
-            <NavMenu addClass={addClass}/>
-            <NavBar removeClass={removeClass}/>
+            <NavMenu/>
+            <NavBar/>
             <div className="offsetContainer">
                 <Map />
             </div>

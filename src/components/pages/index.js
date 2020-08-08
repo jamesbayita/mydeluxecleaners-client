@@ -1,14 +1,15 @@
 import Home from './Home';
-import About from './About';
 import Locations from './Locations';
 import Services from './Services';
+import Coupons from './Coupons';
 import Delivery from './Delivery';
-
+import Alterations from './Alterations';
 
 export {
     Home,
-    About,
     Locations,
     Services,
-    Delivery
+    Coupons,
+    Delivery,
+    Alterations
 }

@@ -4,17 +4,7 @@ import img01 from '../../img/windy.jpg'
 import img02 from '../../img/home-2.jpeg';
 import img03 from '../../img/home-4.jpeg'
 
-export default [
-    {
-        img: img01,
-        title: "Response to COVID-19",
-        content: (
-            <p>We’re in a situation, unlike anything we’ve faced before. We have taken the necessary precautions to protect you and your loved ones. Click on the link below for more information about our actions in response to these unprecedented times.</p>
-        ),
-        callToAction: (
-            <Link className="covid_link" to={'/covid-info'}>More Info</Link>
-        )
-    },{
+export default [{
         img: img02,
         title: "Alterations & Tailoring",
         content: (

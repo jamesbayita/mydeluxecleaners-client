@@ -2,12 +2,9 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import logoDeluxe from '../../img/deluxeLogo.svg';
 
-function NavBar(props) {
+function NavBar() {
     let handleClick = (e) => {
         e.preventDefault();
-        if(props.removeClass){
-            props.removeClass();
-        }
         document.body.classList.add('nav-sidebar-open');
     }
     return(

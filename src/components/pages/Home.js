@@ -3,13 +3,11 @@ import Carousel from '../other/Carousel';
 import {Link} from 'react-router-dom';
 import Footer from '../other/Footer'
 import Form from '../other/Form';
-import DryClean from '../../img/DryClean.svg';
-import Bridal from '../../img/BridalTwo.svg';
-import LaundryShirt from '../../img/LaundryShirt.svg';
-import Alterations from '../../img/Alterations.svg'
-import Bedding from '../../img/Bedding.svg'
 import NavBar from '../other/NavBar';
-import NavMenu from '../other/NavMenu'
+import NavMenu from '../other/NavMenu';
+import Services from '../../img/home-1.png';
+import Locations from '../../img/horizon.jpg';
+import Alterations from '../../img/home-2.jpeg';
 
 // HOME PAGE
 export default function Home(){
@@ -24,61 +22,51 @@ export default function Home(){
             </div>
             <div className="block_02">
                 <div className="block_wrapper">
-                    <div className="row_flex_wrapper">
-                        <div className="s_container">
-                            <div className="s_item_container">
-                                <img className="iconImage" src={DryClean} alt="service icon"/>
+                    <div className="box_content flex_one">
+                        <div className="image_contain">
+                            <img className="locations_img" src={Locations} alt="Services Container"/>
+                        </div>
+                        <div className="description_flex">
+                            <div className="description_heading">
+                                <h2>Locations</h2>
                             </div>
-                            <div className="component_title">
-                                <span className="andSpan">Dry Cleaning</span>
+                            <div className="description_p">
+                                <p>Deluxe has four locations across Las Vegas and Henderson. Each with the same superior quality, service, and convenience. Find a location near you with our store locator.</p>
+                            </div>
+                            <div className="description_link" >
+                                <Link to={'/locations'} className="learn_more_link_03">View Locations</Link>
                             </div>
                         </div>
-                        <div className="s_container">
-                            <div className="s_item_container">
-                            <img className="iconImage" src={Bridal} alt="service icon"/>
+                    </div>
+                    <div className="box_content flex_two">
+                        <div className="image_contain">
+                            <img className="services_img" src={Services} alt="Services Container"/>
+                        </div>
+                        <div className="description_flex">
+                            <div className="description_heading">
+                                <h2>Services</h2>
                             </div>
-                            <div className="component_title">
-                                <span className="andSpan">Bridal Care</span>
+                            <div className="description_p">
+                                <p>At Deluxe, we offer a full range of cleaning solutions for most garment types. Including bridal gowns, comforters, and table covers. Learn more about our available services.</p>
+                            </div>
+                            <div className="description_link">
+                                <Link to={'/services'} className="learn_more_link_03">View Services</Link>
                             </div>
                         </div>
-                        <div className="s_container">
-                            <div className="s_item_container">
-                            <img className="iconImage" src={LaundryShirt} alt="service icon"/>
-                            </div>
-                            <div className="component_title">
-                                <span className="andSpan">Shirt Laundry</span>
-                            </div>
+                    </div>
+                    <div className="box_content flex_three">
+                        <div className="image_contain">
+                            <img className="delivery_img" src={Alterations} alt="Services Container"/>
                         </div>
-                        <div className="s_container">
-                            <div className="s_item_container">
-                            <img className="iconImage" src={Bedding} alt="service icon"/>
+                        <div className="description_flex">
+                            <div className="description_heading">
+                                <h2>Alterations</h2>
                             </div>
-                            <div className="component_title">
-                                <span className="andSpan">Bedding</span>
+                            <div className="description_p">
+                                <p>Since 2008, we've been providing professional alterations and tailoring services. From resizing suits to working with bridal dresses, we have built a reputation for high quality and reliability.</p>
                             </div>
-                        </div>
-                        <div className="s_container">
-                            <div className="s_item_container">
-                            <img className="iconImage" src={Alterations} alt="service icon"/>
-                            </div>
-                            <div className="component_title">
-                                <span className="andSpan">Alterations</span>
-                            </div>
-                        </div>
-                        <div className="s_container">
-                            <div className="s_item_container">
-                            <img className="iconImage" src={Bridal} alt="service icon"/>
-                            </div>
-                            <div className="component_title">
-                                <span className="andSpan">Specialty Items</span>
-                            </div>
-                        </div>
-                        <div className="s_container">
-                            <div className="s_item_container">
-                            <img className="iconImage" src={Bridal} alt="service icon"/>
-                            </div>
-                            <div className="component_title">
-                                <span className="andSpan">Fine Linens</span>
+                            <div className="description_link">
+                                <Link to={'/alterations'} className="learn_more_link_03">Learn More</Link>
                             </div>
                         </div>
                     </div>
@@ -93,9 +81,6 @@ export default function Home(){
                         </div>
                         <div className="description_container_03">
                             <p>Since 2008, we have been providing garment care services for our community. Ranging from Dry Cleaning, Alterations, and Laundry, we have built a customer base that trusts in our service and mission. We do things differently and believe in building a personal relationship with all of our customers. As well as maintaining high standards from the second you walk into our stores. When it comes to our operations, we believe quality and customer service go hand in hand. All of these factors have cemented us as a top-rated business in our industry. We will continue to work off of these values and hopefully serve our community for the next 10 years.</p>
-                        </div>
-                        <div className="learn_more_03">
-                            <Link className="learn_more_link_03" to={'/about'}>Learn More</Link>
                         </div>
                     </div>
                     <div className="video_container_03">
@@ -179,6 +164,18 @@ export default function Home(){
                         setRes={setRes}
                     />
                     }
+                    <div className="coupon_container">
+                            <div className="inner_container">
+                                <div className="coupon_flex">
+                                    <div className="coupon_image">
+                                    <i className="fas fa-money-check-alt fa-5x"></i>
+                                    </div>
+                                    <h2 className="coupons_heading">Coupons</h2>
+                                    <p className='coupons_p'>Take advantage of our online savings. New offers listed monthly.</p>
+                                    <Link className="coupons_link_cont" to={'/coupons'}>View Coupons</Link>
+                                </div>
+                            </div>
+                    </div>
                 </section>
             </div>
             <Footer/>

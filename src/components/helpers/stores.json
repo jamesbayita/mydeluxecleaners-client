@@ -31,6 +31,7 @@
                     "suite": null,
                     "city":"Henderson, NV 89014"
                 },
+                "getDirections": "https://www.google.com/maps/place/Deluxe+Cleaners+%26+Alterations/@36.0477418,-115.0782493,13z/data=!3m1!5s0x80c8d1a964089621:0x311b610e53f94a63!4m8!1m2!2m1!1sdeluxe+cleaners+%26+alterations!3m4!1s0x80c8d0f7c61c4d71:0x57fca1ceee90d37f!8m2!3d36.0672744!4d-115.047191",
                 "services": ["Dry Cleaning", "Laundry", "Alterations", "Bridal Care", "Bedding", "Fine Linens","Leather & Suede", "Wash & Fold"]
             }
         },{
@@ -64,6 +65,7 @@
                     "suite": "#H",
                     "city":"Henderson, NV 89012"
                 },
+                "getDirections": "https://www.google.com/maps/place/Deluxe+Cleaners+%26+Alterations/@36.0447898,-115.0681088,13z/data=!3m1!5s0x80c8d19b3d64bf47:0xdfe83483158d0c2c!4m8!1m2!2m1!1sdeluxe+cleaners+%26+alterations!3m4!1s0x80c8d19b3d277513:0x7c3d1183d1dbd528!8m2!3d36.0181247!4d-115.054735",
                 "services": ["Dry Cleaning", "Laundry", "Alterations", "Bridal Care", "Bedding", "Fine Linens","Leather & Suede", "Wash & Fold"]
             }
         },{
@@ -97,6 +99,7 @@
                     "suite": null,
                     "city":"Las Vegas, NV 89119"
                 },
+                "getDirections":"https://www.google.com/maps/place/Deluxe+Cleaners+%26+Alterations/@36.072331,-115.2114069,13z/data=!4m8!1m2!2m1!1sdeluxe+cleaners+%26+alterations!3m4!1s0x80c8c5eff3d64e49:0xfcbd45df077d9a64!8m2!3d36.072331!4d-115.176388",
                 "services": ["Dry Cleaning", "Laundry", "Bridal Care", "Bedding", "Fine Linens","Leather & Suede", "Wash & Fold"]
             }
         },{
@@ -130,6 +133,7 @@
                     "suite": "#104",
                     "city":"Las Vegas, NV 89139"
                 },
+                "getDirections": "https://www.google.com/maps/place/Deluxe+Cleaners+%26+Alterations/@36.048982,-115.2594049,13z/data=!4m8!1m2!2m1!1sdeluxe+cleaners+%26+alterations!3m4!1s0x80c8c89d350908f9:0xfaeccaea72e79e4a!8m2!3d36.048982!4d-115.224386",
                 "services": ["Dry Cleaning", "Laundry", "Alterations", "Bridal Care", "Bedding", "Fine Linens","Leather & Suede", "Wash & Fold"]
             }
         }
