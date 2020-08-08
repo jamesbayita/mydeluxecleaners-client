@@ -2,13 +2,7 @@ import React from 'react';
 import NavBar from '../other/NavBar';
 import NavMenu from '../other/NavMenu'
 import Footer from '../other/Footer';
-import DryClean from '../../img/DryClean.jpeg';
 import Laundry from '../../img/shirts.jpg';
-import Leather from '../../img/leather.jpg';
-import Linen from '../../img/linen.jpg';
-import Bridal from '../../img/home-3.jpeg';
-import Wash from '../../img/wash.jpg';
-
 
 function Services() {
     return(
