@@ -107,10 +107,10 @@ export default function Home(){
                                     <i className="fas fa-calendar-day fa-lg"></i>
                                 </div>
                                 <div className="title_032">
-                                    <h3>Two Day Return</h3>
+                                    <h3>Next Day Service</h3>
                                 </div>
                                 <div className="summary_032">
-                                    <p>Enjoy a two-day return on Dry Cleaning and Laundry items. Our system will automatically send you a text message notification letting you know your items are racked and ready to be picked up.</p>
+                                    <p>We offer a standard next day return on most Dry Cleaning and Laundry orders <span className="bold">(Monday - Friday)</span>. Our system will send you a text message notification once your order is complete and ready for pickup.</p>
                                 </div>
                             </div>
                             <div className="item_container_032">
@@ -121,7 +121,7 @@ export default function Home(){
                                     <h3>Fully Owned &amp; Operated</h3>
                                 </div>
                                 <div className="summary_032">
-                                    <p>All aspects of our business including locations and fulfillment centers are privately owned and operated. <span className="bold">We do not</span> send your garments out to third party vendors. This allows us to maintain quality and reliability.</p>
+                                    <p>All aspects of our operations including locations and fulfillment centers are privately owned and managed. <span className="bold">We do not</span> outsource your garments to third party vendors. This allows us to maintain quality and reliability.</p>
                                 </div>
                             </div>
                             <div className="item_container_032">
@@ -132,7 +132,7 @@ export default function Home(){
                                     <h3>Reliable Service</h3>
                                 </div>
                                 <div className="summary_032">
-                                    <p>At Deluxe, we pride ourselves on maintaining high standards for your garments. Our superior customer service and on-time delivery has cemented us as a top-rated business in our industry.</p>
+                                    <p>At Deluxe, providing and maintaining high standards for your garments are paramount. Our superior customer service and on-time delivery has cemented us as a top-rated business in our community.</p>
                                 </div>
                             </div>
                             <div className="item_container_032">
@@ -143,7 +143,7 @@ export default function Home(){
                                     <h3>Eco-Friendly</h3>
                                 </div>
                                 <div className="summary_032">
-                                    <p>We believe in taking care of our community. Deluxe places top priority on providing a healthy environment for our employees and customers. Ask us about our process on your next visit.</p>
+                                    <p>We believe in taking care of our community. Deluxe places top priority on providing a healthy environment for our employees and customers. Ask us about our enviromental guidelines on your next visit.</p>
                                 </div>
                             </div>
                         </div>

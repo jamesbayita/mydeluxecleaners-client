@@ -1,6 +1,5 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
-import img01 from '../../img/windy.jpg'
 import img02 from '../../img/home-2.jpeg';
 import img03 from '../../img/home-4.jpeg'
 
@@ -21,7 +20,6 @@ export default [{
         ),
         callToAction: (
             <div className="button_container">
-                <Link className="carousel_button space_between" to={'/delivery'}>More Info</Link>
                 <a className="carousel_button schedule_link" href="https://www.sudzy.co/w/index.html?cleaner=deluxe-cleaners">Schedule Pick Up</a>
             </div>
         )

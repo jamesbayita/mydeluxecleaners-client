@@ -17,6 +17,9 @@ body{
 #root{
   height: 100%;
 }
+/* .bold{
+  font-weight: 700;
+} */
 .nav-sidebar-open .wrapper{
   position: fixed;
   transform: translateX(320px);
@@ -637,7 +640,7 @@ li{
 }
 .description_container_03 > p{
   font-family: 'Roboto', sans-serif;
-  line-height: 1.8em;
+  line-height: 2;
   font-size: 1.1em;
   margin-bottom: 50px;
 }

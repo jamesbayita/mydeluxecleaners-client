@@ -1,11 +1,9 @@
-import React, {useEffect, useRef} from 'react';
-import { useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import stores from '../helpers/stores.json';
 import Locations from '../other/locationItem';
 import Overlay from '../other/Overlay'
-// export api key as environment variable
-const GOOGLE_MAP_API_KEY = 'AIzaSyATje7L6rUQO7t2CT-HjdW7vSrqIL8kos4';
-
+// API KEY
+import {GOOGLE_MAP_API_KEY} from '../../config';
 // zoom level depends on window size
 const zoomLevel = window.screen.width < 700 ? 11 : 12
 
@@ -28,6 +26,7 @@ function Map({options,stores}) {
     // once map is displayed, add markers to map
     if(map) {
         map.data.addGeoJson(stores);
+
         map.data.addListener('click', function (event) {
             const position = event.feature.getGeometry().get();
             map.panTo(position);
@@ -37,12 +36,14 @@ function Map({options,stores}) {
             }
         });
     }
+
     function handleOnClick(id,coordinates) {
         if(coordinates){
             map.panTo({lat: coordinates[1], lng: coordinates[0]});
         }
         setActiveID(id);
     }
+
     function showOverlay(storeIndex){
         let overlay = document.querySelector('#Overlay');
         let container = document.querySelector('#Overlay .overlay_container');

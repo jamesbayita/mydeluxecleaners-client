@@ -56,17 +56,7 @@ function Footer() {
                                 <h4 className="widget-title widgettitle">Delivery</h4>
                                 <div className="menu-footer-menu-delivery-container">
                                     <ul className="menu">
-                                        <li><Link className="widget-link" to={'/delivery'}>Pick Up & Delivery Info</Link></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-                        <section className="widget widget_nav_menu widget_text">
-                            <div className="widget-wrap">
-                                <h4 className="widget-wrap">About Deluxe</h4>
-                                <div className="menu-footer-menu-about-flair-container">
-                                    <ul className="menu">
-                                        <li><Link className="widget-link" to={'/about'}>Our Story</Link></li>
+                                        <li><a className="widget-link" href={'https://www.sudzy.co/w/index.html?cleaner=deluxe-cleaners'}>Pick Up & Delivery</a></li>
                                     </ul>
                                 </div>
                             </div>
