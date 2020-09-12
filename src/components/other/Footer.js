@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../../img/full_logo.svg';
+import logo from '../../img/logo.svg';
 
 function Footer() {
     return (
@@ -40,7 +40,7 @@ function Footer() {
                                     <ul className="menu">
                                         <li className="menu-item menu-item-type-post"><Link className="widget-link" to={'/services'}>Dry Clean</Link></li>
                                         <li className="menu-item menu-item-type-post"><Link className="widget-link" to={'/services'}>Laundry</Link></li>
-                                        <li className="menu-item menu-item-type-post"><Link className="widget-link" to={'/services'}>Alterations & Tailoring</Link></li>
+                                        <li className="menu-item menu-item-type-post"><Link className="widget-link" to={'/alterations'}>Alterations & Tailoring</Link></li>
                                         <li className="menu-item menu-item-type-post"><Link className="widget-link" to={'/services'}>Bedding</Link></li>
                                         <li className="menu-item menu-item-type-post"><Link className="widget-link" to={'/services'}>Bridal Care</Link></li>
                                         <li className="menu-item menu-item-type-post"><Link className="widget-link" to={'/services'}>Wash & Fold</Link></li>
@@ -69,7 +69,7 @@ function Footer() {
             <div className="footer">
                 <div className="footer_container">
                     <div className="credits">
-                        <img className="credits_logo"  src={logo} alt="credits"/>
+                        <img className="credits_logo"  src={logo} alt="Deluxe Cleaners &amp; Alterations"/>
                         <p className="copy">&copy; 2020 RMC & S Corp. All rights reserved.</p>
                     </div>
                 </div>

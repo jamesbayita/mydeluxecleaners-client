@@ -16,7 +16,7 @@ function BoxBackground(props){
         <div {...props}></div>
     )
 }
-function Image({isCurrent, takeFocus, image,id, title, callToAction, content}){
+function Image({isCurrent, takeFocus, image,id, title, callToAction, content, alt}){
     let ref = useRef();
     useEffect(()=>{
             if(isCurrent && takeFocus){
@@ -25,7 +25,7 @@ function Image({isCurrent, takeFocus, image,id, title, callToAction, content}){
     return(
         <div aria-hidden={!isCurrent} className="showBG">
             <img 
-                alt={`Background ${id}`}
+                alt={alt}
                 ref={ref} 
                 src={image}
                 tabIndex="-1"
@@ -98,6 +98,7 @@ export default function Carousel(){
                         callToAction={slide.callToAction}
                         title={slide.title}
                         content={slide.content}
+                        alt={slide.alt}
                     />
                 ))}
             </BoxBackground>

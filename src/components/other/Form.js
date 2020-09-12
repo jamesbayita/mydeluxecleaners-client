@@ -14,8 +14,9 @@ let schema = yup.object().shape({
 // status(400): will return error object.
 // NOTE: server will validate email address to make sure the value isn't currently subscribed
 const Form = (props) => (
+    <div className="form-broder">
        <div className="form-container">
-           <h2 className="form-heading">Join our Mailing List</h2>
+           <h2 className="form-heading">Join our Members Club</h2>
            <p className="form-p">Special coupons, notifications, and more.</p>
             <Formik
                 initialValues={{first_name: '', last_name: '', email: ''}}
@@ -88,6 +89,7 @@ const Form = (props) => (
                 </form>
             )}
             </Formik>
+       </div>
        </div>
 )
 

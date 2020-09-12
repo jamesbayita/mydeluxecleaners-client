@@ -1,27 +1,27 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
-import img02 from '../../img/home-2.jpeg';
-import img03 from '../../img/home-4.jpeg'
+import image01 from '../../img/optimized01.jpg';
+import image02 from '../../img/optimized11.jpg';
 
-export default [{
-        img: img02,
-        title: "Alterations & Tailoring",
-        content: (
-            <p>Since 2008, we've been providing professional alterations and tailoring services. It is the backbone of our core services. From resizing garments to working on bridal dresses, we have built a reputation for quality and reliability.</p>
-        ),
-        callToAction: (
-            <Link className="carousel_button" to={'/alterations'}>More Info</Link>
-        )
-    }, {
-        img: img03,
+
+export default [
+    {
+        img: image01,
+        alt: 'Dry Cleaning and Laundry Delivery Service',
         title: "Pick up & Delivery",
         content: (
-            <p>Enjoy superior quality, full-service garment care without having to leave your home or office. We are now offering pick up and delivery service for Las Vegas residents. Click on the link below for more information, or if you're ready to schedule a pick-up.</p>
+            <p>Enjoy superior quality, full-service garment care without having to leave your home or office. We are now offering pick up and delivery service for Las Vegas and Henderson residents. Click on the link below to schedule a pick-up.</p>
         ),
         callToAction: (
             <div className="button_container">
                 <a className="carousel_button schedule_link" href="https://www.sudzy.co/w/index.html?cleaner=deluxe-cleaners">Schedule Pick Up</a>
             </div>
+        )
+    },{
+        img: image02,
+        alt: 'Dry Clean',
+        title: "Complete Garment Care",
+        content: (
+            <p>Since 2008, we've provided professional Dry Cleaning, Laundry, and Alteration services. A full range of garment care solutions for a seamless experience.</p>
         )
     }
 ]

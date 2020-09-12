@@ -21,7 +21,7 @@ function Coupons() {
                         <div className="page_flex">
                             <div className="flex_box">
                                 <div className="coupon_logo">
-                                    <img src={logo} alt="Deluxe Cleaners"/>
+                                    <img src={logo} alt="Deluxe Cleaners &amp; Alterations"/>
                                 </div>
                                 <div className="coupon_expiration">
                                     <span className="expiration">No expiration</span>

@@ -5,10 +5,7 @@ function CurrentTime(){
     let [time, setTime] = useState();
 
     useEffect(()=>{
-        const id = setInterval(()=>{
-            setTime(getTimeStamp());
-        },1000);
-        return () => {clearInterval(id)};
+        setTime(getTimeStamp());
     },[]);
 
     return(

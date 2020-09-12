@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import logoDeluxe from '../../img/full_logo.svg';
+import logoDeluxe from '../../img/logo.svg';
 
 function NavBar() {
     let handleClick = (e) => {
@@ -26,7 +26,7 @@ function NavBar() {
                         <a className="button button-large" href="https://www.sudzy.co/w/index.html?cleaner=deluxe-cleaners"><span>SCHEDULE PICKUP</span></a>
                     </div>
                 </div>
-                <div className="logo-header"><Link className="logo-link" to={'/'}><img src={logoDeluxe} alt=""/></Link></div>
+                <div className="logo-header"><Link className="logo-link" to={'/'}><img src={logoDeluxe} alt="Deluxe Cleaners &amp; Alterations"/></Link></div>
             </div>
         </header>
     )

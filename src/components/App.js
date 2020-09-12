@@ -1,6 +1,7 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
-import {Home,Services, Locations, Coupons, Delivery, Alterations} from './pages/index';
+import {Home,Services, Locations, Coupons, Alterations} from './pages/index';
+import {Helmet} from 'react-helmet';
 
 function NoMatch() {
   return(
@@ -18,7 +19,6 @@ function App(){
             <Route path={'/'} exact={true} component={Home} />
             <Route path={'/services'} component={Services} />
             <Route path={'/locations'} component={Locations} />
-            <Route path={'/delivery'} component={Delivery} />
             <Route path={'/coupons'} component={Coupons} />
             <Route path={'/alterations'} component={Alterations} />
             <Route component={NoMatch} />

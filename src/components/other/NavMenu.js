@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import logo from '../../img/logo.svg';
+import logo from '../../img/logoHalf.svg';
 
 function NavMenu() {
     let onClick_closeButton = () => {
@@ -11,7 +11,7 @@ function NavMenu() {
             <div className="top">
                 <div className="header">
                     <div className="pull-left">
-                        <img src={logo} alt="LOGO"/>
+                        <img src={logo} alt="Deluxe Cleaners &amp; Alterations"/>
                     </div>
                     <div className="pull-right">
                         <div className="bt-close js-close-menu" onClick={onClick_closeButton}>CLOSE</div>

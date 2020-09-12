@@ -5,16 +5,25 @@ import Footer from '../other/Footer'
 import Form from '../other/Form';
 import NavBar from '../other/NavBar';
 import NavMenu from '../other/NavMenu';
-import Services from '../../img/home-1.png';
-import Locations from '../../img/horizon.jpg';
-import Alterations from '../../img/home-2.jpeg';
+import Services from '../../img/optimized06.png';
+import Locations from '../../img/optimized09.jpg';
+import image04 from '../../img/optimized04.jpg';
+import about_image from '../../img/optimized08.jpg';
+import webm from '../../img/media/services.webm';
+import mp4 from '../../img/media/services.mp4';
+import {Helmet} from 'react-helmet';
 
 // HOME PAGE
 export default function Home(){
     const [res, setRes] = useState();
     let [isLoading, setIsLoading] = useState(false);
+
     return(
         <div className="Home-Wrapper">
+             <Helmet>
+                <title>Deluxe Cleaners and Alterations</title>
+                <meta charSet="utf-8" name="Deluxe Cleaners &amp; Alterations" content="Professional Dry Cleaning and Alterations in Henderson and Las Vegas. High quality alterations and tailoring. Pickup and Delivery service available."/>
+            </Helmet>
             <NavBar/>
             <NavMenu />
             <div className="block_01">
@@ -24,14 +33,14 @@ export default function Home(){
                 <div className="block_wrapper">
                     <div className="box_content flex_one">
                         <div className="image_contain">
-                            <img className="locations_img" src={Locations} alt="Services Container"/>
+                            <img className="locations_img" src={about_image} alt="Dry Cleaning and Alterations"/>
                         </div>
                         <div className="description_flex">
                             <div className="description_heading">
                                 <h2>Locations</h2>
                             </div>
                             <div className="description_p">
-                                <p>Deluxe has four locations across Las Vegas and Henderson. Each with the same superior quality, service, and convenience. Find a location near you with our store locator.</p>
+                                <p>We offer four locations across Las Vegas and Henderson. Each with the same superior quality, service, and convenience. Find a location near you with our store locator.</p>
                             </div>
                             <div className="description_link" >
                                 <Link to={'/locations'} className="learn_more_link_03">View Locations</Link>
@@ -40,14 +49,14 @@ export default function Home(){
                     </div>
                     <div className="box_content flex_two">
                         <div className="image_contain">
-                            <img className="services_img" src={Services} alt="Services Container"/>
+                            <img className="services_img" src={Services} alt="Dry Cleaning Service"/>
                         </div>
                         <div className="description_flex">
                             <div className="description_heading">
                                 <h2>Services</h2>
                             </div>
                             <div className="description_p">
-                                <p>At Deluxe, we offer a full range of cleaning solutions for most garment types. Including bridal gowns, comforters, and table covers. Learn more about our available services.</p>
+                                <p>Deluxe provides you with a full range of garment care solutions for most garment types. Including but not limited to bridal gowns, suits, and comforters. Learn more about our services.</p>
                             </div>
                             <div className="description_link">
                                 <Link to={'/services'} className="learn_more_link_03">View Services</Link>
@@ -56,14 +65,14 @@ export default function Home(){
                     </div>
                     <div className="box_content flex_three">
                         <div className="image_contain">
-                            <img className="delivery_img" src={Alterations} alt="Services Container"/>
+                            <img className="delivery_img" src={image04} alt="Alterations"/>
                         </div>
                         <div className="description_flex">
                             <div className="description_heading">
                                 <h2>Alterations</h2>
                             </div>
                             <div className="description_p">
-                                <p>Since 2008, we've been providing professional alterations and tailoring services. From resizing suits to working with bridal dresses, we have built a reputation for high quality and reliability.</p>
+                                <p>Alterations is one of our core services. From resizing suits to adjusting bridal gowns, we have built a reputation for quality and reliability. Learn more about our Alterations service.</p>
                             </div>
                             <div className="description_link">
                                 <Link to={'/alterations'} className="learn_more_link_03">Learn More</Link>
@@ -76,23 +85,45 @@ export default function Home(){
                 <div className="container_03">
                     <div className="about_container_03">
                         <div className="heading_03">
-                            <h1>About</h1>
+                            <h1>Who we are</h1>
                             <span></span>
                         </div>
                         <div className="description_container_03">
-                            <p>Since 2008, we have been providing garment care services for our community. Ranging from Dry Cleaning, Alterations, and Laundry, we have built a customer base that trusts in our service and mission. We do things differently and believe in building a personal relationship with all of our customers. As well as maintaining high standards from the second you walk into our stores. When it comes to our operations, we believe quality and customer service go hand in hand. All of these factors have cemented us as a top-rated business in our industry. We will continue to work off of these values and hopefully serve our community for the next 10 years.</p>
+                            <p>Deluxe Cleaners is built around three core beliefs. Customer-Centric Service, Commitment to operational excellence, and reputation for reliability. These principles have helped us cultivate a loyal customer base that believes and trusts in our service. For over 10 years, we have proudly served and grown with our customers. From high school students bringing in their prom dresses to new college graduates getting their robes ready for a graduation ceremony. Deluxe Cleaners has built a reputation for excellence, and we are here to continue this tradition into the future.</p>
                         </div>
                     </div>
-                    <div className="video_container_03">
-                        <div className="video_wrapper_03">
-                            <div className="center_03">
-                            <div className="wistia_responsive_padding"  style={{padding:"56.25% 0 0 0",position:"relative"}}>
-                                <div className="wistia_responsive_wrapper" style={{height:"100%",left:"0",position:"absolute",top:"0",width:"100%"}}>
-                                    <iframe src="https://fast.wistia.net/embed/iframe/1xtfswqyqg?videoFoam=true&autoPlay=false" title="Business Card Video"
-                                    allowtransparency="true" frameBorder="0" scrolling="no" className="wistia_embed" name="wistia_embed" allowFullScreen msallowfullscreen="true" width="100%" height="100%"></iframe>
-                                    </div>
-                                </div>
-                            <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+                    <div className="about_container_032">
+                        <div className="image-container">
+                            <img className="about_image" src={Locations} alt="Deluxe Cleaners &amp; Alterations Locations"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="block-video">
+                <div className="content-wrapper">
+                    <div className="video-wrapper">
+                        <video className="webmVideo" playsInline={true} autoPlay={true} muted={true} loop={true}>
+                            <source src={webm} />
+                            <source src={mp4} />
+                        </video>
+                    </div>
+                    <div className="flex-wrapper">
+                        <div className="action-container">
+                            <div className="content-div">
+                                <h2>Our Process</h2>
+                                <p>Learn more about our garment care process, from beginning to end.</p>
+                                    <span className="wistia_embed wistia_async_1xtfswqyqg popover=true popoverContent=link" style={{display:"inline",position:"relative"}}>
+                                    <button >
+                                        <div className="flex-container-button">
+                                            <div className="fa-icon-container">
+                                                <i className="fas fa-play-circle fa-6x"></i>
+                                            </div>
+                                            <div className="span-wrapper">
+                                                <span>Click to watch</span>
+                                            </div>
+                                        </div>
+                                    </button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -110,7 +141,8 @@ export default function Home(){
                                     <h3>Next Day Service</h3>
                                 </div>
                                 <div className="summary_032">
-                                    <p>We offer a standard next day return on most Dry Cleaning and Laundry orders <span className="bold">(Monday - Friday)</span>. Our system will send you a text message notification once your order is complete and ready for pickup.</p>
+                                    <p>We offer a standard next day return on Dry Cleaning and Laundry orders <span className="bold">(Monday - Friday)</span>. Our system will automatically send you a text message notification once your order is complete and ready for pickup.</p>
+                                    
                                 </div>
                             </div>
                             <div className="item_container_032">
@@ -118,10 +150,10 @@ export default function Home(){
                                 <i className="fas fa-sitemap fa-lg"></i>
                                 </div>
                                 <div className="title_032">
-                                    <h3>Fully Owned &amp; Operated</h3>
+                                    <h3>No Outsourcing</h3>
                                 </div>
                                 <div className="summary_032">
-                                    <p>All aspects of our operations including locations and fulfillment centers are privately owned and managed. <span className="bold">We do not</span> outsource your garments to third party vendors. This allows us to maintain quality and reliability.</p>
+                                    <p>All aspects of our services, including locations and fulfillment centers, are privately owned and managed. <span className="bold">We do not</span> outsource your garments to third-party service providers. This allows us to maintain quality and reliability.</p>
                                 </div>
                             </div>
                             <div className="item_container_032">
@@ -129,10 +161,10 @@ export default function Home(){
                                 <i className="fas fa-handshake fa-lg"></i>
                                 </div>
                                 <div className="title_032">
-                                    <h3>Reliable Service</h3>
+                                    <h3>Reliability</h3>
                                 </div>
                                 <div className="summary_032">
-                                    <p>At Deluxe, providing and maintaining high standards for your garments are paramount. Our superior customer service and on-time delivery has cemented us as a top-rated business in our community.</p>
+                                    <p>At Deluxe, providing and maintaining high standards for our customers is paramount. Our superior customer service and on-time delivery has cemented us as a top-rated business in our community.</p>
                                 </div>
                             </div>
                             <div className="item_container_032">
@@ -140,10 +172,10 @@ export default function Home(){
                                 <i className="fas fa-leaf fa-lg"></i>
                                 </div>
                                 <div className="title_032">
-                                    <h3>Eco-Friendly</h3>
+                                    <h3>Family Owned &amp; Operated</h3>
                                 </div>
                                 <div className="summary_032">
-                                    <p>We believe in taking care of our community. Deluxe places top priority on providing a healthy environment for our employees and customers. Ask us about our enviromental guidelines on your next visit.</p>
+                                    <p>We strive to make a difference. Since 2008 we have impacted the lives of our customers, employees, and our neighbors. As a small local business, we will continue to provide essential services for our community.</p>
                                 </div>
                             </div>
                         </div>
