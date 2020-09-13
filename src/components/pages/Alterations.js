@@ -29,7 +29,7 @@ function Alterations() {
                             <h2 id="copy-heading">A history for quality work</h2>
                             <p>There is a certain feeling you get when a piece of clothing fits you perfectly. It's a feeling of security that the piece you are wearing fits just right, complimenting your body type. As if that garment was specifically made just for you.</p>
                             <br/>
-                            <p id="quote">"We are in the business of providing confidence through the peices we alter for our customers."</p>
+                            <p id="quote">"We are in the business of providing confidence through the pieces we alter for our customers."</p>
                             <br/>
                             <p>Our process begins by identifying our customer's vision for their clothing piece. After that, we begin adjustments with pins that will not damage even the most gentle fabrics. Once you are 100% satisfied with what you see, we get to work. It's that simple!</p>
                             <br/>

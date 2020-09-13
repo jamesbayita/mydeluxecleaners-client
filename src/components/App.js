@@ -1,7 +1,6 @@
 import React from 'react';
 import {Route, Switch} from 'react-router-dom';
 import {Home,Services, Locations, Coupons, Alterations} from './pages/index';
-import {Helmet} from 'react-helmet';
 
 function NoMatch() {
   return(
