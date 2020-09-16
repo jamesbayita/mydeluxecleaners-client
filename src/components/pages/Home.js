@@ -40,7 +40,7 @@ export default function Home(){
                                 <h2>Locations</h2>
                             </div>
                             <div className="description_p">
-                                <p>We offer four locations across Las Vegas and Henderson. Each with the same superior quality, service, and convenience. Find a location near you with our store locator.</p>
+                                <p>We have four locations across Las Vegas. Each with the same superior quality, service, and convenience. Find a location near you with our store locator.</p>
                             </div>
                             <div className="description_link" >
                                 <Link to={'/locations'} className="learn_more_link_03">View Locations</Link>
@@ -56,7 +56,7 @@ export default function Home(){
                                 <h2>Services</h2>
                             </div>
                             <div className="description_p">
-                                <p>Deluxe provides you with a full range of garment care solutions for most garment types. Including but not limited to bridal gowns, suits, and comforters. Learn more about our services.</p>
+                                <p>Deluxe provides you with a full range of garment care solutions for most garment styles. Including but not limited to bridal gowns, suits, and comforters. Learn more about our services.</p>
                             </div>
                             <div className="description_link">
                                 <Link to={'/services'} className="learn_more_link_03">View Services</Link>
@@ -141,7 +141,7 @@ export default function Home(){
                                     <h3>Next Day Service</h3>
                                 </div>
                                 <div className="summary_032">
-                                    <p>We offer a standard next day return on Dry Cleaning and Laundry orders <span className="bold">(Monday - Friday)</span>. Our system will automatically send you a text message notification once your order is complete and ready for pickup.</p>
+                                    <p>We offer a standard next day return on Dry Cleaning and Laundry orders <span className="bold">(Monday - Thursday)</span>. Our system will automatically send you a text message notification once your order is complete and ready for pickup.</p>
                                     
                                 </div>
                             </div>
