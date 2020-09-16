@@ -44,7 +44,7 @@ function Alterations() {
                     </div>
                     <div id="right-copy" className="alt-half">
                         <div className="copy-align-middle">
-                            <h2>We believe in the quality our service, which is why we ensure our customers with 100% guaranteed satisfaction.</h2>
+                            <h2>We believe in the quality of our service, which is why we ensure our customers with 100% guaranteed satisfaction.</h2>
                             <p>We understand the value of our relationships with customers. If you are not completely satisfied with our work, we will redo your garment until we get it right, 100% free of charge.</p>
                         </div>
                     </div>
